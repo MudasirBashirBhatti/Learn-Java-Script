@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="ex1"></div>
+    <!-- .......................  -->
+    <hr>
+    <div class="ex2">
+        <button>click</button>
+        <button>Submit</button>
+        <button>Upload</button>
+    </div>
+    <!-- ..........................  -->
+
+    <script>
+        // best alternate of for loop 
+        var stuNames = ["Ahmad", "Ali", "Kamran"]
+        for (elm of stuNames) {
+            console.log(elm)
+        }
+
+        // dom manipulation for for of loop 
+        // ................example 1................... 
+        var stuNames = ["Ahmad", "Ali", "Kamran"]
+        let ex1 = document.querySelector('.ex1');
+        for (elm of stuNames) {
+            ex1.innerHTML = stuNames
+        }
+
+        // ...............example 2...................... 
+        let ex2 = document.querySelectorAll('.ex2 button');
+        for (item of ex2) {
+            item.addEventListener('click', (e) => {
+                myBtn = e.target;
+                if (myBtn.textContent == 'click') {
+                    myBtn.style.color = 'green'
+                } else if (myBtn.textContent == 'Submit') {
+                    myBtn.style.color = 'orange'
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

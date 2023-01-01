@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onkeydown="myFunc()">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <div id="myNum">0</div>
+
+    <script>
+
+        function myFunc(){
+
+        
+       let textarea = document.querySelector('textarea').value;
+       let myNum = document.getElementById('myNum');
+    //    the line below will create array from string and then we will find the length of array to count the numbers. 
+       let myWords=Array.from(textarea);
+       myNum.textContent= myWords.length + 1
+        }
+    </script>
+</body>
+</html>

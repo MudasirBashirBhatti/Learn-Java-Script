@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button>Login</button>
+    <button>Log Out</button>
+    <button>Submit</button>
+
+    <div class="secondExample"></div>
+
+    <script>
+
+//................for each loop in arrays.................//
+/*
+it loops through individual elements of an array , index number of an individual element and the current array we deal with. We can not use break like in switch case statement.
+for each method gives us three types of data of an array e.g. 
+1.element 2.index 3.current array
+foreach change the original array. as for each return undefined at the end.
+*/
+
+        let button = document.querySelectorAll('button')
+        button.forEach((e) => {
+            console.log(e);
+            e.style.backgroundColor = 'red';
+        })
+
+        // ................example2.................... 
+        let secondExample = document.querySelector('.secondExample')
+        let stuName = ['Ali', 'Ahmad', 'Abid']
+        stuName.forEach((e) => {
+            console.log(e)
+            secondExample.textContent = e;
+        })
+        // .................example3..................... 
+
+        let myNum = [2,5,3]
+        myNum.forEach((e,index,array)=>{
+            console.log(`index${index} element is ${e*e} and original array is ${array}`)
+        })
+
+    </script>
+</body>
+
+</html>
